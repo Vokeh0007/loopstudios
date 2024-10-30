@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+</head>
+<style>
+    h1 {
+        background-color: green;
+        transition: all 1s ease-out;
+    }
+    p {
+        font-size: 20px;
+        transition: font-size 2s;
+    }
+    h1:hover {
+        background-color: yellow;
+        transform: rotate(360deg);
+        transform-origin: bottom left;
+    }
+    @keyframes shake{
+        0% {
+            transform: translate(0);
+            background-color: red;
+        }
+        20% {
+            transform: translate(50px);
+            background-color: green;
+        }
+        80% {
+            transform: translate(-50px);
+            background-color: brown;
+        }
+        100% {
+            transform: translate(0px);
+        }
+    }
+    p{
+        width: 400px;
+        padding: 20px;
+        border: 2px solid black;
+        animation: shake 1s linear 5s infinite;
+    }
+</style>
+<!-- define keyframes -- define multiple instances/groups of properties at different stages of the animation e.g., 0%, 30% 80% -->
+<body>
+    <h1>CSS animations</h1>
+    <p>transition effect/property provides simple form of animations</p>
+</body>
+</html>
